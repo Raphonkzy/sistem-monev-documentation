@@ -1,0 +1,76 @@
+# /skor
+
+Endpoint ini digunakan untuk mengelola skor desa.
+
+## POST /api/skor
+
+### Request
+
+```json
+{
+  "kd_desa": "DES1745748148039",
+  "partisipasi_masyarakat": 98,
+  "keragaman_paket_wisata": 95,
+  "akses_tempat_wisata": 88,
+  "keramahan_difabel": 70,
+  "fasilitas_tempat_wisata": 100,
+  "produk_tempat_wisata": 80
+}
+```
+
+## Response
+
+```json
+{
+  "status": "success",
+  "data": {
+    "kd_desa": "DES1745748148039",
+    "partisipasi_masyarakat": 98,
+    "keragaman_paket_wisata": 95,
+    "akses_tempat_wisata": 88,
+    "keramahan_difabel": 70,
+    "fasilitas_tempat_wisata": 100,
+    "produk_tempat_wisata": 80,
+    "total_skor": 531,
+    "rata_rata": 89
+  },
+  "total_skor": 531,
+  "rata_rata": 89
+}
+```
+
+## PUT /api/:kd_desa
+
+### Request
+
+```json
+{
+  "partisipasi_masyarakat": 98,
+  "keragaman_paket_wisata": 95,
+  "akses_tempat_wisata": 88,
+  "keramahan_difabel": 70,
+  "fasilitas_tempat_wisata": 100,
+  "produk_tempat_wisata": 90
+}
+```
+
+### Response
+
+```json
+{
+    "status": "success",
+    "data": {
+        "kd_desa": "DES1745748148039",
+        "partisipasi_masyarakat": 98,
+        "keragaman_paket_wisata": 95,
+        "akses_tempat_wisata": 88,
+        "keramahan_difabel": 70,
+        "fasilitas_tempat_wisata": 100,
+        "produk_tempat_wisata": 90,
+        "total_skor": 541,
+        "rata_rata": 90
+    },
+    "total_skor": 541,
+    "rata_rata": 90
+}
+```
